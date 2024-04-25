@@ -1,0 +1,74 @@
+---
+import "@/styles/globals.css";
+import Layout from "../layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+---
+
+<Layout title="Frontend Mentor | Intro section with dropdown navigation">
+  <Header />
+  <main
+    class="flex flex-col-reverse gap-[2.98rem] xl:mx-[10.31rem] xl:mt-20 xl:flex-row xl:items-center xl:justify-between xl:gap-[7.81rem]"
+  >
+    <section class="flex flex-col gap-12 px-4 xl:gap-[7.25rem] xl:pt-20">
+      <div
+        class="flex flex-col items-center justify-center gap-6 text-center xl:justify-start xl:gap-[3.19rem] xl:text-left"
+      >
+        <div class="flex flex-col gap-4 xl:gap-12">
+          <h1
+            class="text-4xl font-bold leading-[2.625rem] tracking-[-0.03125rem] text-black xl:w-[32.75rem] xl:text-[5rem] xl:leading-[5rem] xl:tracking-[-0.06944rem]"
+          >
+            Make remote work
+          </h1>
+          <p
+            class="text-base font-normal leading-relaxed text-[#686868] xl:w-[27.8125rem] xl:text-lg"
+          >
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
+        </div>
+        <button
+          type="button"
+          class="h-12 w-[8.5rem] cursor-pointer rounded-[0.9375rem] bg-black text-base font-bold leading-relaxed tracking-[-0.01388rem] text-[#FAFAFA] transition-all duration-500 ease-linear hover:border hover:border-solid hover:border-black hover:bg-transparent hover:text-black xl:h-14 xl:w-[10.1875rem] xl:self-start xl:text-lg"
+          >Learn more</button
+        >
+      </div>
+      <div class="flex items-center gap-[1.8rem] xl:gap-[2.53rem]">
+        <img
+          src="/public/images/client-databiz.svg"
+          alt="databiz"
+          class="w-[5.07819rem] xl:w-[7.0715rem]"
+        />
+        <img
+          src="/public/images/client-audiophile.svg"
+          alt="audiophile"
+          class="w-[3.30419rem] xl:w-[4.5625rem]"
+        />
+        <img
+          src="/public/images/client-meet.svg"
+          alt="meet"
+          class="w-[4.00863rem] xl:w-[5.58206rem]"
+        />
+        <img
+          src="/public/images/client-maker.svg"
+          alt="maker"
+          class="w-[3.681rem] xl:w-[5.12588rem]"
+        />
+      </div>
+    </section>
+    <section class="">
+      <picture>
+        <source
+          media="(min-width:768px )"
+          srcset="/public/images/image-hero-desktop.png"
+        />
+        <img
+          src="/public/images/image-hero-mobile.png"
+          alt="image-hero"
+          class=""
+        />
+      </picture>
+    </section>
+  </main>
+</Layout>
+
+<style></style>

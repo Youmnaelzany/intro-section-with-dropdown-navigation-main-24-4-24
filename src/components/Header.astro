@@ -1,0 +1,175 @@
+---
+import "@/styles/globals.css";
+---
+
+<header
+  class="m-4 mb-6 xl:ml-[2.58rem] xl:mr-10 xl:mt-8 xl:flex xl:items-center xl:justify-between xl:gap-[3.89rem]"
+>
+  <div class="flex items-center justify-between">
+    <a href="/" class="">
+      <img src="/images/logo.svg" alt="logo" class="" />
+    </a>
+    <button type="button" id="menuBtn">
+      <img src="/images/icon-menu.svg" alt="" class="xl:hidden" />
+    </button>
+  </div>
+  <nav
+    class="relative hidden xl:flex xl:items-center xl:justify-between xl:gap-[40.81rem]"
+    id="navList"
+  >
+    <ul class="flex items-center justify-between gap-10">
+      <li
+        class="flex items-center gap-2 text-sm font-normal leading-4 text-[#686868] transition-colors duration-500 ease-linear hover:cursor-pointer hover:text-[#151515]"
+      >
+        Features
+        <!-- Arrow Wrapper -->
+        <div class="">
+          <img
+            src="/images/icon-arrow-down.svg"
+            alt=""
+            class=""
+            id="downArrowFeatures"
+          />
+          <img
+            src="/images/icon-arrow-up.svg"
+            alt=""
+            class="hidden"
+            id="upArrowFeatures"
+          />
+        </div>
+        <!-- List Wrapper -->
+        <div
+          class="absolute -bottom-[10.25rem] -left-[4rem] hidden h-40 w-[9.5625rem] rounded-[0.625rem] bg-white p-6"
+          id="featuresList"
+        >
+          <ul
+            class="flex flex-col gap-4 text-sm font-normal leading-4 text-[#686868] transition-colors duration-500 ease-linear hover:cursor-pointer hover:text-[#151515]"
+          >
+            <li class="flex items-center gap-[0.94rem]">
+              <div class="">
+                <img src="/images/icon-todo.svg" alt="" class="" />
+              </div>
+              Todo List
+            </li>
+            <li class="flex items-center gap-[0.94rem]">
+              <div class="">
+                <img src="/images/icon-calendar.svg" alt="" class="" />
+              </div>
+              Calendar
+            </li>
+            <li class="flex items-center gap-[0.94rem]">
+              <div class="">
+                <img src="/images/icon-reminders.svg" alt="" class="" />
+              </div>
+              Reminders
+            </li>
+            <li class="flex items-center gap-[0.94rem]">
+              <div class="">
+                <img src="/images/icon-planning.svg" alt="" class="" />
+              </div>
+              Planning
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li
+        class="flex items-center gap-2 text-sm font-normal leading-4 text-[#686868] transition-colors duration-500 ease-linear hover:cursor-pointer hover:text-[#151515]"
+      >
+        Company
+        <!-- Arrow Wrapper -->
+        <div class="">
+          <img
+            src="/images/icon-arrow-down.svg"
+            alt=""
+            class=""
+            id="downArrowCompany"
+          />
+          <img
+            src="/images/icon-arrow-up.svg"
+            alt=""
+            class="hidden"
+            id="upArrowCompany"
+          />
+        </div>
+        <!-- List Wrapper -->
+        <div
+          class="absolute -bottom-[8.25rem] left-[6rem] hidden h-[8rem] w-[7.25rem] rounded-[0.625rem] bg-white p-6"
+          id="companyList"
+        >
+          <ul
+            class="flex flex-col gap-4 text-sm font-normal leading-4 text-[#686868] transition-colors duration-500 ease-linear hover:cursor-pointer hover:text-[#151515]"
+          >
+            <li class="">History</li>
+            <li class="">Our Team</li>
+            <li class="">Blog</li>
+          </ul>
+        </div>
+      </li>
+      <li
+        class="text-sm font-normal leading-4 text-[#686868] transition-colors duration-500 ease-linear hover:cursor-pointer hover:text-[#151515]"
+      >
+        Careers
+      </li>
+      <li
+        class="text-sm font-normal leading-4 text-[#686868] transition-colors duration-500 ease-linear hover:cursor-pointer hover:text-[#151515]"
+      >
+        About
+      </li>
+    </ul>
+    <div class="flex items-center justify-between gap-10">
+      <button
+        type="button"
+        class="text-sm font-normal leading-4 text-[#686868] transition-colors duration-500 ease-linear hover:cursor-pointer hover:text-[#151515]"
+        >Login</button
+      >
+      <button
+        type="button"
+        class="h-[2.625rem] w-[6.5rem] rounded-[0.875rem] border border-solid border-[#686868] text-sm font-normal leading-4 text-[#686868] outline-none transition-colors duration-500 ease-linear hover:cursor-pointer hover:border-[#151515] hover:text-[#151515]"
+        >Register</button
+      >
+    </div>
+  </nav>
+</header>
+
+<style is:inline>
+  #featuresList {
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.15);
+  }
+</style>
+
+<script is:inline>
+  const upArrowFeatures = document.getElementById("upArrowFeatures");
+  const downArrowFeatures = document.getElementById("downArrowFeatures");
+  const upArrowCompany = document.getElementById("upArrowCompany");
+  const downArrowCompany = document.getElementById("downArrowCompany");
+  const featuresList = document.getElementById("featuresList");
+  const companyList = document.getElementById("companyList");
+  const menuBtn = document.getElementById("menuBtn");
+  const navList = document.getElementById("navList");
+
+  downArrowFeatures.addEventListener("click", () => {
+    upArrowFeatures.classList.remove("hidden");
+    downArrowFeatures.classList.add("hidden");
+    featuresList.classList.remove("hidden");
+  });
+  upArrowFeatures.addEventListener("click", () => {
+    upArrowFeatures.classList.add("hidden");
+    downArrowFeatures.classList.remove("hidden");
+    featuresList.classList.add("hidden");
+  });
+  downArrowCompany.addEventListener("click", () => {
+    upArrowCompany.classList.remove("hidden");
+    downArrowCompany.classList.add("hidden");
+    companyList.classList.add("hidden");
+  });
+  upArrowCompany.addEventListener("click", () => {
+    upArrowCompany.classList.add("hidden");
+    downArrowCompany.classList.remove("hidden");
+    companyList.classList.remove("hidden");
+  });
+
+  menuBtn.addEventListener("click", () => {
+    navList.classList.toggle("hidden");
+    navList.style.flexDirection = "flex-column";
+  });
+</script>
